@@ -1,9 +1,9 @@
-import { Outlet } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import styled from 'styled-components';
+import { Outlet } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
+import styled from "styled-components";
 
-const StyledApplayout = styled.div`
+const StyledAppLayout = styled.div`
   display: grid;
   grid-template-columns: 26rem 1fr;
   grid-template-rows: auto 1fr;
@@ -24,9 +24,9 @@ const Container = styled.div`
   gap: 3.2rem;
 `;
 
-export default function AppLayout() {
+function AppLayout() {
   return (
-    <StyledApplayout>
+    <StyledAppLayout>
       <Header />
       <Sidebar />
       <Main>
@@ -34,6 +34,8 @@ export default function AppLayout() {
           <Outlet />
         </Container>
       </Main>
-    </StyledApplayout>
+    </StyledAppLayout>
   );
 }
+
+export default AppLayout;
